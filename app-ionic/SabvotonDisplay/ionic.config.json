@@ -1,0 +1,7 @@
+{
+  "name": "SabvotonDisplay",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

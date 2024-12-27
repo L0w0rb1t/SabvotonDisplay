@@ -35,6 +35,6 @@ void Bluetooth::write_battery_voltage(float batteryVoltage) {
   this->batteryVoltageCharacteristic.writeValue(batteryVoltage);
 }
 
-void Bluetooth::write_speed(int speed) {
+void Bluetooth::write_speed(float speed) {
   this->speedCharacteristic.writeValue(speed);
 }

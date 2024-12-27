@@ -1,0 +1,22 @@
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: calc(100vh - 80px);
+}
+  
+.loading-spinner {
+    --color: var(--color-light-blue);
+    height: 50px;
+    width: 50px;
+}
+  
+.scan-results-container {
+}
+  
+.scan-result-container {
+    background: var(--color-light-blue);
+    padding: 10px;
+    border-radius: 4px;
+}

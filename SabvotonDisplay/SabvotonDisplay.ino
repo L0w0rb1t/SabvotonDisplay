@@ -41,7 +41,7 @@ void loop() {
   //Every ~500ms get new readings for all registers (change SABVOTON_READ_INTERVAL_MS to adjust interval)
   if(millis() > (lastMillis + SABVOTON_READ_INTERVAL_MS)) {
     float batteryVoltage = sabvoton.read_battery_voltage();
-    int speed;
+    float speed;
     if(SPEED_UNIT == 1) {
       speed = sabvoton.read_speed_mph();
     } else if(SPEED_UNIT == 0) {

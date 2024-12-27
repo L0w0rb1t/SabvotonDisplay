@@ -1,0 +1,64 @@
+.content-container {
+    position: relative;
+}
+
+.speedometer-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.speedometer-text-big {
+    font-size: 30vw;
+    font-weight: 700;
+    margin: 0px;
+}
+
+.speedometer-text-small {
+    font-size: 10vw; 
+    font-weight: 400;
+    margin: 0px;
+}
+
+.speedometer-text-extra-small {
+    font-size: 2vw; 
+    font-weight: 400;
+    margin: 0px;
+}
+
+.config-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.config-btn {
+    padding: 5px 7.5px 5px 7.5px;
+}
+
+.battery-container {
+    width: 80vw;
+    position: absolute;
+    bottom: 0;
+    left: 10vw;
+}
+
+.battery-icon {
+  display: inline-block; 
+  transform: rotate(-90deg);
+//   --ionicon-stroke-width: 50px;
+}
+
+.mode-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.icon {
+    height: 30px;
+    width: 30px;
+}

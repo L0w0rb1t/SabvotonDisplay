@@ -22,8 +22,8 @@ class Sabvoton {
     void init(void);
     int read_register(int reg);
     float read_battery_voltage(void);
-    int read_speed_mph(void);
-    int read_speed_kph(void);
+    float read_speed_mph(void);
+    float read_speed_kph(void);
   private:
     ModbusMaster node;
 };

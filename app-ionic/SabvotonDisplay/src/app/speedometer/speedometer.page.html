@@ -1,0 +1,20 @@
+<div class="content-container">
+  <div class="speedometer-container">
+    <h1 class="speedometer-text-big">{{speedWhole}}<span class="speedometer-text-small">.{{speedDecimal}} <span class="speedometer-text-extra-small"></span></span></h1>
+  </div>
+  <div class="flex-center config-container">
+    <button class="btn btn-primary config-btn">
+      <ion-icon name="hammer" class="icon config-icon"></ion-icon>
+    </button>
+  </div>
+  <div class="flex-center battery-container">
+    <ion-icon name="battery-full" class="icon battery-icon mr-5"></ion-icon>
+    <!-- <ion-icon name="battery-half" class="battery-icon mr-5"></ion-icon> -->
+    <!-- <ion-icon name="battery-dead" class="battery-icon mr-5"></ion-icon> -->
+    <p class="speedometer-text-extra-small">{{batteryVoltage}} V</p>
+  </div>
+  <div class="flex-center mode-container">
+    <ion-icon name="cog" class="icon mr-5"></ion-icon>
+    <p class="speedometer-text-extra-small">1</p>
+  </div>
+</div>

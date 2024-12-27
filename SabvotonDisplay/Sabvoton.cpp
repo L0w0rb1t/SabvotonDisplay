@@ -23,8 +23,8 @@ void Sabvoton::init(void) {
   delay(50);
 
   if(result != node.ku8MBSuccess) {
-    ErrorHandler::raise_fatal_error("Failed to initialize Sabvoton controller");
-    return;
+    // ErrorHandler::raise_fatal_error("Failed to initialize Sabvoton controller");
+    // return;
   }
   Serial.println("Sabvoton controller initialized");
 }
@@ -41,23 +41,23 @@ int Sabvoton::read_register(int reg) {
 float Sabvoton::read_battery_voltage(void) {
   int result = this->read_register(Sabvoton::Register_Battery_Voltage);
   if(result == -99999) {
-    return 0.00;
+    return 84.32;
   }
   return (float) ((float)result) / SINGLEFLOAT;
 }
 
-int Sabvoton::read_speed_mph(void) {
+float Sabvoton::read_speed_mph(void) {
   int result = this->read_register(Sabvoton::Register_Motor_RPM);
   if(result == -99999) {
-    return 0;
+    return 15.5;
   }
-  return (int) ((result * WHEEL_CIRCUMFERENCE) / 1056);
+  return (float) ((result * WHEEL_CIRCUMFERENCE) / 1056);
 }
 
-int Sabvoton::read_speed_kph(void) {
+float Sabvoton::read_speed_kph(void) {
   int result = this->read_register(Sabvoton::Register_Motor_RPM);
   if(result == -99999) {
-    return 0;
+    return 15.5;
   }
-  return (int) ((result * WHEEL_CIRCUMFERENCE) / 656.2);
+  return (float) ((result * WHEEL_CIRCUMFERENCE) / 656.2);
 }

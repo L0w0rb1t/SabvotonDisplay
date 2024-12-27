@@ -1,0 +1,18 @@
+<div class="content-container">
+  <h1 class="content-title">Connect to the Arduino</h1>
+
+  <button (click)="scanStart()" class="btn btn-primary mt-20" *ngIf="!scanning">Scan for devices</button>
+
+  <div class="loading-container" *ngIf="scanning">
+    <ion-spinner name="circular" class="loading-spinner"></ion-spinner>
+    <h2 class="content-heading mt-20" *ngIf="scanning">Scanning...</h2>
+  </div>
+
+  <div class="scan-results-container mt-20" *ngIf="foundDevices.length > 0">
+    <div class="scan-result-container mb-10" *ngFor="let device of foundDevices">
+      <h3 class="content-sub-heading"><b>Name:</b> {{device.device.name || 'N/A'}}</h3>
+      <p class="content-sub-heading mt-5"><b>ID:</b> {{device.device.deviceId}}</p>
+    </div>
+  </div>
+
+</div>
