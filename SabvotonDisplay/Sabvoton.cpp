@@ -41,7 +41,7 @@ int Sabvoton::read_register(int reg) {
 float Sabvoton::read_battery_voltage(void) {
   int result = this->read_register(Sabvoton::Register_Battery_Voltage);
   if(result == -99999) {
-    return 84.32;
+    return 0.0;
   }
   return (float) ((float)result) / SINGLEFLOAT;
 }
@@ -49,7 +49,7 @@ float Sabvoton::read_battery_voltage(void) {
 float Sabvoton::read_speed_mph(void) {
   int result = this->read_register(Sabvoton::Register_Motor_RPM);
   if(result == -99999) {
-    return 15.5;
+    return 0.0;
   }
   return (float) ((result * WHEEL_CIRCUMFERENCE) / 1056);
 }
@@ -57,7 +57,7 @@ float Sabvoton::read_speed_mph(void) {
 float Sabvoton::read_speed_kph(void) {
   int result = this->read_register(Sabvoton::Register_Motor_RPM);
   if(result == -99999) {
-    return 15.5;
+    return 0.0;
   }
   return (float) ((result * WHEEL_CIRCUMFERENCE) / 656.2);
 }
